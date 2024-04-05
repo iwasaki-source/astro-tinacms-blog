@@ -8,6 +8,9 @@ import Footer from "@components/footer.astro";
 import Container from '@components/container.astro';
 import Meta from '@components/meta.astro';
 
+// Supports weights 100-900
+import '@fontsource-variable/noto-serif-display';
+
 const props = Astro.props;
 ---
 <html lang="ja">
@@ -24,3 +27,9 @@ const props = Astro.props;
     </Container>
 	</body>
 </html>
+
+<style>
+  body {
+  font-family: 'Noto Serif Display Variable', serif;
+}
+</style>

@@ -7,6 +7,8 @@ import Pagination from "@components/pagination.astro";
 import { getCollection } from 'astro:content';
 import { compareDesc } from 'date-fns';
 
+import '@fontsource/twinkle-star';
+
 export async function getStaticPaths({ paginate }) {
   const blogPosts = await getCollection('blog');
   const sortedBlogPosts = blogPosts.sort((a, b) => compareDesc(a.data.pubDate, b.data.pubDate));
@@ -34,3 +36,9 @@ const {
   </div>
   <Pagination prev={prev} next={next} />
 </Layout>
+
+<style>
+  h1 {
+    font-family: 'Twinkle Star';
+  }
+</style>
